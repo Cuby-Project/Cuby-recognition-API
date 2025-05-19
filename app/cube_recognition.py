@@ -2,10 +2,6 @@ import cv2
 import numpy as np
 from .color_detection import detect_colors
 
-# Rubik's cube face labels in standard order
-FACE_ORDER = ['U', 'R', 'F', 'D', 'L', 'B']
-
-
 def generate_cube_string(images):
     cube_string = ''
 

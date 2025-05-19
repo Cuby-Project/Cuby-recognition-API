@@ -3,6 +3,10 @@ from .cube_recognition import generate_cube_string
 
 main = Blueprint('main', __name__)
 
+@main.route('/', methods=['GET'])
+def health_check():
+    return jsonify({'status': 'API is running'}), 200
+
 @main.route('/cubeFacesToCubeString', methods=['POST'])
 def upload_faces():
     if 'images' not in request.files:
