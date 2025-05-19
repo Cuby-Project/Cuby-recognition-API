@@ -134,9 +134,3 @@ Pull requests are welcome! For major changes, open an issue first to discuss wha
 ## 🛡️ License
 
 MIT License
-
----
-
-## 🏗️ Status
-
-![Build](https://github.com/your-username/your-repo-name/actions/workflows/ci.yml/badge.svg)
