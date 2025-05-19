@@ -38,8 +38,5 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Images and data
-tests/images/
-
 # Logs
 *.log

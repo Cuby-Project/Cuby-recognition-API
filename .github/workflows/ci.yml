@@ -24,8 +24,8 @@ jobs:
 
     - name: Generate synthetic dataset
       run: |
-        python generate_synthetic_dataset.py
-        python train_color_model.py
+        python data/generate_synthetic_dataset.py
+        python app/model/train_color_model.py
 
     - name: Run tests
       run: |
