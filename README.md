@@ -8,8 +8,7 @@ A Flask API that receives 6 centered images of a scrambled Rubik's Cube and retu
 
 - 📷 Color detection from HSV-processed images  
 - 🤖 KNN classifier trained on HSV color samples  
-- 🧠 Optional Kociemba solver integration (for solving the cube)  
-- 🧪 Full test suite: unit, integration, coverage  
+- 🧪 Full test suite: unit, integration  
 - 🐳 Docker-ready + GitHub Actions CI/CD  
 
 ---
