@@ -42,7 +42,7 @@ This runs:
 
 ## 🌐 API Usage
 
-### 🟩 Endpoint: `/api/solve`
+### 🟩 Endpoint: `/cubeFacesToCubeString`
 
 **Method**: `POST`  
 **Content-Type**: `multipart/form-data`
