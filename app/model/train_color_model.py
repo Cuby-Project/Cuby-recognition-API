@@ -6,7 +6,7 @@ import joblib
 import os
 
 # Load dataset
-df = pd.read_csv('../../data/dataset.csv')
+df = pd.read_csv('./data/dataset.csv')
 X = df[['H', 'S', 'V']].values
 y = df['label'].values
 
@@ -18,7 +18,7 @@ model = KNeighborsClassifier(n_neighbors=3)
 model.fit(X_train, y_train)
 
 # Save model
-os.makedirs('', exist_ok=True)
+os.makedirs('./', exist_ok=True)
 joblib.dump(model, 'color_model.pkl')
 
 print("✅ Model trained and saved to app/model/color_model.pkl")
