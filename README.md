@@ -1,50 +1,74 @@
-# 🧊 Rubik's Cube Color Detection API (Flask + KNN + OpenCV)
+# 🎨 Cuby Recognition API
+
+<div align="center">
+
+[![GitHub stars](https://img.shields.io/github/stars/Cuby-Project/Cuby-recognition-API.svg)](https://github.com/Cuby-Project/Cuby-recognition-API/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Cuby-Project/Cuby-recognition-API.svg)](https://github.com/Cuby-Project/Cuby-recognition-API/network)
+[![GitHub issues](https://img.shields.io/github/issues/Cuby-Project/Cuby-recognition-API.svg)](https://github.com/Cuby-Project/Cuby-recognition-API/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Cuby-Project/Cuby-recognition-API.svg)](https://github.com/Cuby-Project/Cuby-recognition-API/commits/main)
+
+</div>
+
+## 📝 Description
 
 A Flask API that receives 6 centered images of a scrambled Rubik's Cube and returns the cube string (color layout) by detecting each sticker's color using OpenCV and a trained KNN model in HSV space.
 
----
+## 🔗 Related Projects
 
-## 🚀 Features
+- [Cuby Client](https://github.com/Cuby-Project/Cuby-Client) - Main desktop application
+- [Cuby Mobile App](https://github.com/Cuby-Project/Cuby-mobile-app) - Mobile version
+- [Cuby Solve API](https://github.com/Cuby-Project/Cuby-solve-API) - Cube solving algorithm API
+- [Cuby Capture API](https://github.com/Cuby-Project/Cuby-capture-API) - Cube state capture API
+- [Cuby Capture Website](https://github.com/Cuby-Project/Cuby-capture-website) - Web interface
 
-- 📷 Color detection from HSV-processed images  
-- 🤖 KNN classifier trained on HSV color samples  
-- 🧪 Full test suite: unit, integration  
-- 🐳 Docker-ready + GitHub Actions CI/CD  
+## ✨ Features
 
----
+- 📷 Color detection from HSV-processed images
+- 🤖 KNN classifier trained on HSV color samples
+- 🧪 Full test suite: unit, integration
+- 🐳 Docker-ready + GitHub Actions CI/CD
+- 🔄 Real-time color recognition
+- 📊 High accuracy color detection
 
-## ⚙️ Setup
+## 🚀 Setup
 
 ### 🔧 Requirements
 
-- Python 3.10+  
-- OpenCV  
-- Flask  
-- Scikit-learn  
+- Python 3.10+
+- OpenCV
+- Flask
+- Scikit-learn
 
-### 🧪 Install dependencies
+### 🛠️ Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Cuby-Project/Cuby-recognition-API.git
+```
+
+2. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 📊 Generate and train color model
+3. Generate and train color model:
 
 ```bash
 make train
 ```
 
 This runs:
+
 - `generate_synthetic_dataset.py`: generates HSV data for W, Y, R, O, B, G
 - `train_color_model.py`: trains and saves a KNN classifier
 
----
-
 ## 🌐 API Usage
 
-### 🟩 Endpoint: `/cubeFacesToCubeString`
+### Endpoint: `/cubeFacesToCubeString`
 
-**Method**: `POST`  
+**Method**: `POST`
 **Content-Type**: `multipart/form-data`
 
 **Fields**: Upload 6 images named exactly:
@@ -68,33 +92,29 @@ Optional (if solver is included):
 }
 ```
 
----
-
 ## 🧪 Testing
 
-### ✅ Unit & integration tests
+### Unit & Integration Tests
 
 ```bash
 make test
 ```
 
-### 📈 Coverage report
+### Coverage Report
 
 ```bash
 make coverage
 ```
 
-### 🐳 Docker test
+### Docker Test
 
 ```bash
 make docker-test
 ```
 
----
-
 ## 🐳 Docker
 
-### Build the image
+### Build the Image
 
 ```bash
 docker build -t rubik-api .
@@ -106,31 +126,21 @@ docker build -t rubik-api .
 docker run -p 5000:5000 rubik-api
 ```
 
----
+## 🤝 Contributing
 
-## 🧪 Continuous Integration (GitHub Actions)
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-- All pushes and PRs to `main` will trigger tests via `.github/workflows/ci.yml`
-- Test results and coverage are displayed in the GitHub Actions tab
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
----
+## 📄 License
 
-## 📎 Example image input
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Make sure each input image:
+## 📞 Support
 
-- Is 1 face of the cube
-- Is cropped and centered
-- Has clear and visible stickers (ideally under good lighting)
-
----
-
-## 🙌 Contributing
-
-Pull requests are welcome! For major changes, open an issue first to discuss what you’d like to change.
-
----
-
-## 🛡️ License
-
-MIT License
+- [Report a bug](https://github.com/Cuby-Project/Cuby-recognition-API/issues/new/choose)
+- [Request a feature](https://github.com/Cuby-Project/Cuby-recognition-API/issues/new/choose)
